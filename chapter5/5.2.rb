@@ -1,17 +1,17 @@
-currencies = {'japan' => 'yen', 'us' => 'doller', 'india' => 'rupee'}
+currencies = {'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
 # イタリアの通過を追加する
 currencies['italy'] = 'euro'
 p currencies
 
-currencies = {'japan' => 'yen', 'us' => 'doller', 'india' => 'rupee'}
+currencies = {'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
 # 既存の値を上書きする
 currencies['japan'] = '円'
 p currencies
 
-currencies = {'japan' => 'yen', 'us' => 'doller', 'india' => 'rupee'}
+currencies = {'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
 p currencies['india']
 
-currencies = {'japan' => 'yen', 'us' => 'doller', 'india' => 'rupee'}
+currencies = {'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
 currencies.each do |key, value|
   puts "#{key} : #{value}"
 end
@@ -27,7 +27,7 @@ p a == c
 d = {'x' => 10, 'y' => 2, 'z' => 3}
 p a == d
 
-currencies = {'japan' => 'yen', 'us' => 'doller', 'india' => 'rupee'}
+currencies = {'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
 currencies.delete('japan')
 p currencies
 
