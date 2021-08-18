@@ -187,7 +187,7 @@ user = UserThird.new('Alice')
 puts user.hello
 
 alice = 'I am Alice.'
-# aliceというオブぇくとに特異メソッドを追加するもうひとつの方法
+# aliceというオブジェクトに特異メソッドを追加するもうひとつの方法
 class << alice
   def shuffle
     chars.shuffle.join
@@ -195,3 +195,32 @@ class << alice
 end
 puts alice.shuffle
 
+
+# クラスメソッドを定義するコード例
+class UserForth
+  def self.hello
+    'Hello.'
+  end
+
+  class << self
+    def hi
+      'Hi.'
+    end
+  end
+end
+puts UserForth.hello
+puts UserForth.hi
+
+# 特異メソッドを定義するコード例
+alice = 'I am alice.'
+def alice.hello
+  'Hello.'
+end
+
+class << alice
+  def hi
+    'Hi.'
+  end
+end
+puts alice.hello
+puts alice.hi
